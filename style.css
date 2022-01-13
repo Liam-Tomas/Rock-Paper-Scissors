@@ -6,7 +6,7 @@
     --light-color: #f4f4f4;
     --lose-color: #dc3545;
     --win-color: #28a745;
-    --modal-duration: 1s;
+    
 }
 
 * {
@@ -39,6 +39,7 @@ body {
     cursor:pointer;
     outline:none;
     border:none;
+    margin-bottom:1rem;
 }
 
 .restart-btn:hover {
@@ -85,6 +86,16 @@ body {
 .choice:hover {
     color: var(--primary-color)
 }
+
+.text-win {
+    color: var(--win-color)
+}
+
+.text-lose {
+    color: var(--lose-color)
+}
+
+
 
 @media(max-width: 700px) {
     .choice {
