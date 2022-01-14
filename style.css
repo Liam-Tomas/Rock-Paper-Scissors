@@ -31,6 +31,7 @@ body {
     text-align: center; 
     background: #e5e5e5;;
     border-radius: 10px;
+    margin-bottom: 2rem;
 }
 
 .containerMain {
@@ -43,7 +44,6 @@ body {
 .containerMain h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
-    margin-top: 2rem;
 }
 
 .main-title {

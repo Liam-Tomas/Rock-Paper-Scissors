@@ -80,9 +80,13 @@ function showWinner(winner, computerChoice) {
         scoreboard.player++
         // show modal result
         result.innerHTML = `
+        <div class="closeButton1"> 
+            <button class="closeButton">x</button>
+        </div>
         <h1 class ="text-win">You win! </h1>
         <i class="fas fa-hand-${computerChoice} fa-10x"></i>
         <p>Computer chose <strong>${computerChoice}</strong </p>
+       
 
         `;
     } else if (winner === 'computer') {
@@ -90,16 +94,24 @@ function showWinner(winner, computerChoice) {
          scoreboard.computer++
          // show modal result
          result.innerHTML = `
+         <div class="closeButton1"> 
+            <button class="closeButton">x</button>
+        </div>
          <h1 class ="text-lose">You lose!</h1>
          <i class="fas fa-hand-${computerChoice} fa-10x"></i>
          <p>Computer chose <strong>${computerChoice}</strong </p>
+         
      
          `;
     } else  {
         result.innerHTML = `
-        <h1 class="text-tie">Its a tie!  </h1>
+        <div class="closeButton1"> 
+            <button class="closeButton">x</button>
+        </div>
+        <h1 class="text-tie">Its a tie! </h1>
         <i class="fas fa-hand-${computerChoice} fa-10x"></i>
         <p>Computer chose <strong>${computerChoice}</strong </p>
+     
   
         `;
     }
@@ -128,6 +140,9 @@ function clearModal(e) {
     if(e.target === modal) {
         modal.style.display = 'none';
     }
+    if (e.target.matches('.closeButton')) {
+        modal.style.display = 'none';
+    }
 }
 
 // display player choice
@@ -147,10 +162,6 @@ for (let choice of choices) {
     choice.addEventListener('click', play);
 }
 
-function closeGame () {
-    modal.style.display = 'none';
-}
 
 window.addEventListener('click', clearModal)
 restart.addEventListener('click', restartGame);
-closerButton.addEventListener('click', closeGame)

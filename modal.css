@@ -20,7 +20,7 @@
     margin: 10% auto;
     width: 350px;
     border-radius:10px;
-    padding: 3rem;
+    padding: 2rem;
     box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
     animation-name: modalopen;
     animation-duration: var(--modal-duration);
@@ -34,6 +34,28 @@
     font-size: 1.2rem;
     margin-top: 1rem;
 }
+
+.closeButton {
+    padding:.2rem .6rem;
+    font-size:1rem;
+    background: none;
+    cursor: pointer;
+    border-radius: 10px;
+    margin:0px;
+    border: 1px solid grey;
+    color:grey;
+}
+.closeButton:hover {
+    background: orange;
+    color:white;
+}
+
+.closeButton1 {
+    display:flex;
+    justify-content: flex-end;
+}
+
+
 
 @keyframes modalopen {
     from {
