@@ -24,10 +24,10 @@ body {
 
 .container {
     max-width: 1100px;
-    min-height: 70vh;
+    min-height: 30rem;
     margin: auto;
     overflow: hidden; 
-    padding: 0 2rem;
+    padding: 0.5rem 2rem;
     text-align: center; 
     background: #e5e5e5;;
     border-radius: 10px;
@@ -37,12 +37,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-height: 40vh;
+    /* min-height: 40vh; */
 }
 
 .containerMain h2 {
     font-size: 2rem;
     margin-bottom: 2rem;
+    margin-top: 2rem;
 }
 
 .main-title {
@@ -61,7 +62,8 @@ body {
     cursor:pointer;
     outline:none;
     border:none;
-    margin-top:3rem;
+    margin-top:5rem;
+    margin-bottom: 4rem;
     border-radius: 10px;
 }
 

@@ -4,6 +4,7 @@ const score = document.querySelector('#score')
 const result = document.querySelector('#result')
 const restart = document.querySelector('#restart')
 const modal = document.querySelector('.modal')
+const closerButton = document.querySelector('#closeButton')
 
 const scoreboard = {
     player: 0,
@@ -92,14 +93,14 @@ function showWinner(winner, computerChoice) {
          <h1 class ="text-lose">You lose!</h1>
          <i class="fas fa-hand-${computerChoice} fa-10x"></i>
          <p>Computer chose <strong>${computerChoice}</strong </p>
-        
+     
          `;
     } else  {
         result.innerHTML = `
         <h1 class="text-tie">Its a tie!  </h1>
         <i class="fas fa-hand-${computerChoice} fa-10x"></i>
         <p>Computer chose <strong>${computerChoice}</strong </p>
-
+  
         `;
     }
     // show score
@@ -146,6 +147,10 @@ for (let choice of choices) {
     choice.addEventListener('click', play);
 }
 
+function closeGame () {
+    modal.style.display = 'none';
+}
 
 window.addEventListener('click', clearModal)
 restart.addEventListener('click', restartGame);
+closerButton.addEventListener('click', closeGame)
