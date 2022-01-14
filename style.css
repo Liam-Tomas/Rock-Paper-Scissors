@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 :root {
-    --primary-color: #003699;
-    --dark-color: #333333; 
+    --primary-color: #fca311;
+    --dark-color: #14213d; 
     --light-color: #f4f4f4;
     --lose-color: #dc3545;
-    --win-color: #28a745;
+    --win-color: #28a733;
     
 }
 
@@ -18,28 +18,51 @@
 body {
     font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    background: #fff;
-    color:#333;
+    background: #ffffff;
+    color: #333;
 }
 
 .container {
     max-width: 1100px;
+    min-height: 70vh;
     margin: auto;
     overflow: hidden; 
     padding: 0 2rem;
     text-align: center; 
+    background: #e5e5e5;;
+    border-radius: 10px;
+}
+
+.containerMain {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 40vh;
+}
+
+.containerMain h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.main-title {
+    display: flex;
+    justify-content: center;
+    font-size: 4rem;
+    margin-top: 3rem;
 }
 
 .restart-btn {
     display:none;
     background: var(--light-color);
     color: #333;
-    padding: 0.4rem 1.3rem;
+    padding: 0.6rem 1.7rem;
     font-size: 1rem;
     cursor:pointer;
     outline:none;
     border:none;
-    margin-bottom:1rem;
+    margin-top:3rem;
+    border-radius: 10px;
 }
 
 .restart-btn:hover {
@@ -59,16 +82,24 @@ body {
 .score {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
     font-size: 1.2rem;
     color:#fff;
+    grid-gap: 1rem;
 }
 
 .score p:first-child {
-    background: var(--primary-color)
+    background: var(--primary-color);
+    padding:10px;
+    border-radius: 10px;
+
 }
 
 .score p:last-child {
-    background: var(--dark-color)
+    background: var(--dark-color);
+    padding:10px;
+    border-radius: 10px;
+    text-align: center;
 }
 
 .choices {
@@ -77,6 +108,7 @@ body {
     grid-gap: 2rem;
     margin-top: 3rem;
     text-align: center;
+    justify-content: center;
 }
 
 .choice {
@@ -95,6 +127,9 @@ body {
     color: var(--lose-color)
 }
 
+.text-tie {
+    color: var(--primary-color)
+}
 
 
 @media(max-width: 700px) {

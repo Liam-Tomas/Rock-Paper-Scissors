@@ -73,7 +73,7 @@ function getWinner(p, c) {
     }
 };
 
-function showWinner(winner, computerChoice, playerChoice) {
+function showWinner(winner, computerChoice) {
     if(winner === 'player') {
         // increment player score
         scoreboard.player++
@@ -82,6 +82,7 @@ function showWinner(winner, computerChoice, playerChoice) {
         <h1 class ="text-win">You win! </h1>
         <i class="fas fa-hand-${computerChoice} fa-10x"></i>
         <p>Computer chose <strong>${computerChoice}</strong </p>
+
         `;
     } else if (winner === 'computer') {
          // increment computer score
@@ -95,7 +96,7 @@ function showWinner(winner, computerChoice, playerChoice) {
          `;
     } else  {
         result.innerHTML = `
-        <h1>Its a tie!  </h1>
+        <h1 class="text-tie">Its a tie!  </h1>
         <i class="fas fa-hand-${computerChoice} fa-10x"></i>
         <p>Computer chose <strong>${computerChoice}</strong </p>
 
@@ -110,6 +111,17 @@ function showWinner(winner, computerChoice, playerChoice) {
     modal.style.display = 'block';
 }
 
+// Restart Game
+function restartGame() {
+    scoreboard.player = 0;
+    scoreboard.computer = 0;
+    score.innerHTML = `
+    <p>Player: ${scoreboard.player}</p>
+    <p>Computer: ${scoreboard.computer}</p>
+    `
+}
+
+
 // Clear modal
 function clearModal(e) {
     if(e.target === modal) {
@@ -117,6 +129,14 @@ function clearModal(e) {
     }
 }
 
+// display player choice
+
+// function playersPick (e) {
+//     const usersChoice = e.target.id;
+//     result.innerHTML = `
+//     <p>You chose <strong>${usersChoice}</strong </p>
+//     `;
+// }
 
 // // Event Listeners (2 ways of writing it, for of or for each loop...)
 
@@ -126,4 +146,6 @@ for (let choice of choices) {
     choice.addEventListener('click', play);
 }
 
+
 window.addEventListener('click', clearModal)
+restart.addEventListener('click', restartGame);
